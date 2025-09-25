@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	font-family: 'Gabarito', sans-serif;
+}
+
+:root {
+	--bg: #ffebee;
+	--bg-layer-one: #ffcdd2;
+	--bg-layer-two: #ef9a9a;
+	--border: #9e9e9e;
+	--accent: #d50000;
+	--accent-layer-one: #d500002a;
+	--white: #fff;
+	--black: #000;
+	--heading: #ffeb3b;
+}

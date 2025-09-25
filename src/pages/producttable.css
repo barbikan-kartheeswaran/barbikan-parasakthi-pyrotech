@@ -1,0 +1,64 @@
+#product-table #regular-price {
+	text-decoration: line-through;
+	text-decoration-color: red;
+	color: black;
+}
+.animate-logo {
+	opacity: 0;
+	animation: logoFadeZoom 1.5s ease-in-out forwards;
+}
+
+.download-button {
+	background-color: white;
+	color: #891652;
+	/* The color matches the pink text */
+	border: 2px solid #891652;
+	padding: 10px 20px;
+	/* font-size: 16px; */
+	cursor: pointer;
+	border-radius: 4px;
+	text-transform: uppercase;
+}
+
+.download-button:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.download-button:hover:not(:disabled) {
+	background-color: #ffaf00;
+	color: white;
+	border: 2px solid #ffaf00;
+}
+
+/*table model card table finish*/
+
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.download-button {
+	animation: blink 1s infinite;
+	/* 1s duration, infinite loop */
+}
+
+@keyframes logoFadeZoom {
+	0% {
+		opacity: 0;
+		transform: scale(6);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
