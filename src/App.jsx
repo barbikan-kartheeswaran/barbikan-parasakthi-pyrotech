@@ -9,9 +9,9 @@ import GiftBox from './pages/GiftBox';
 import Contact from './pages/Contact';
 import FamilyPack from './pages/FamilyPack';
 import ComboPack from './pages/ComboPack';
-
 import Footer from './Components/Footer/Footer';
 import Bankfooter from './Components/Bank Footer/Bankfooter';
+import PremiumPack from './pages/PremiumPack';
 
 function App() {
 	return (
@@ -24,6 +24,7 @@ function App() {
 				<Route path='/wholesale' element={<WholeSale />} />
 				<Route path='/gift-box' element={<GiftBox />} />
 				<Route path='/combo-pack' element={<ComboPack />} />
+				<Route path='/premium' element={<PremiumPack />} />
 				<Route path='/contact' element={<Contact />} />
 				<Route path='/about' element={<About />} />
 			</Routes>
