@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import Aos from 'aos';
-import PremiumPackProduct from './PremiumPackProduct';
+import BlueStarPackProduct from './BlueStarPackProduct';
 import 'aos/dist/aos.css';
 import './producttable.css';
 import axios from 'axios';
 
-const PremiumPack = () => {
+const BlueStarPack = () => {
 	useEffect(() => {
 		Aos.init();
 	}, []);
@@ -26,7 +26,7 @@ const PremiumPack = () => {
 			const { data } = response.data;
 			// Filter only Retail category
 			const family = data.find(
-				(cat) => cat.group_by.toLowerCase() === 'family pack'
+				(cat) => cat.group_by.toLowerCase() === 'blue star'
 			);
 
 			if (family) {
@@ -117,7 +117,7 @@ const PremiumPack = () => {
 		fetchHead();
 	}, []);
 	const retailPriceCategory =
-		headData.find((item) => item.category_name === 'Family Pack') || {};
+		headData.find((item) => item.category_name === 'Blue Star') || {};
 	return (
 		<div>
 			{/* price list table start*/}
@@ -133,7 +133,7 @@ const PremiumPack = () => {
 					</Button>
 				</div>
 				<div>
-					<PremiumPackProduct />
+					<BlueStarPackProduct />
 				</div>
 			</div>
 
@@ -142,4 +142,4 @@ const PremiumPack = () => {
 	);
 };
 
-export default PremiumPack;
+export default BlueStarPack;

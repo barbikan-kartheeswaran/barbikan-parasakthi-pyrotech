@@ -8,7 +8,7 @@ import Fireworks from '@fireworks-js/react';
 import defaultProductLogo from '../assests/image/productLogo.png';
 import axios from 'axios';
 
-const PremiumPackProduct = () => {
+const BlueStarPackProduct = () => {
 	const [retailData, setRetailData] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [quantities, setQuantities] = useState({});
@@ -49,7 +49,7 @@ const PremiumPackProduct = () => {
 		try {
 			const response = await axios.get(
 				`${import.meta.env.VITE_CRACKERS}/products/${organizationId}/lists`,
-				{ params: { groupBy: 'Premium' } }
+				{ params: { groupBy: 'Blue Star' } }
 			);
 			setRetailData(response.data.data || []);
 		} catch (err) {
@@ -609,4 +609,4 @@ const PremiumPackProduct = () => {
 	);
 };
 
-export default PremiumPackProduct;
+export default BlueStarPackProduct;
